@@ -1,0 +1,19 @@
+<div class="container-fluid">
+ 	<div class="row">
+ 		<div class="col-lg-6 col-lg-offset-3">
+ 		<input type="text" placeholder="Filtrar usuarios..." ng-model=filtro><br><br>
+ 			<table class="table" ng-controller='ctrl2'>
+ 				<tr class="bg-info">
+ 					<th>Usuario</th>
+ 					<th>Edad</th>
+ 					<th>Email</th>
+ 				</tr>
+ 				<tr ng-repeat='usr in usuarios | filter:filtro | orderBy:user'>
+ 					<td>{{usr.user}}</td>
+ 					<td>{{usr.edad}}</td>
+ 					<td>{{usr.mail}}</td>
+ 				</tr>
+ 			</table>
+ 		</div>
+ 	</div>	
+ </div>
