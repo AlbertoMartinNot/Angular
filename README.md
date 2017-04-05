@@ -1,2 +1,2 @@
 # Angular
-Angular JS files
+Angular practice files
