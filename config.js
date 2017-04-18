@@ -35,4 +35,18 @@ app1.config(['$routeProvider', function($routeProvider) {
  	{'user':'Juan','edad':'50','mail':'juan@qeq.com'},
  	{'user':'Laura','edad':'38','mail':'laura@qpq.com'},];
 
+ 	$scope.addUser=function(name,edad,mail){
+
+ 		var user={'user': name,'edad': edad,'mail': mail};
+ 		$scope.usuarios.push(user);
+
+ 	};
+
+ 	$scope.eliminar=function(usr){
+ 		var index=$scope.usuarios.indexOf(usr);
+ 		$scope.usuarios.splice(index,1);
+
+
+ 	};
+
  });
