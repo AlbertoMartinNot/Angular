@@ -1,0 +1,7 @@
+{"juegos":
+	[{"juego":"Zelda: Breath Of The Wild","nota":"10","plataforma":"Nintendo Switch/Wii U","genero":"RPG","imagen":"zelda.jpg","desarrollador":"Nintendo"},
+	{"juego":"Persona 5","nota":"9","plataforma":"PS4","genero":"JRPG","imagen":"persona.jpg","desarrollador":"Atlus"},
+	{"juego":"Mass Effect: Andromeda","nota":"8","plataforma":"PC/PS4/XBoxOne","genero":"RPG","imagen":"mass.jpeg","desarrollador":"BioWare"},
+	{"juego":"Horizon: Zero Dawn","nota":"9","plataforma":"PS4","genero":"Adventure","imagen":"horizon.jpg","desarrollador":"Guerrilla Games"},
+	{"juego":"Nioh","nota":"8","plataforma":"PS4","genero":"Souls-like","imagen":"nioh.jpeg","desarrollador":"Koei"},
+	{"juego":"NieR: Automata","nota":"9","plataforma":"PC/PS4","genero":"ARPG","imagen":"nier.png","desarrollador":"Platinum Games"}]}

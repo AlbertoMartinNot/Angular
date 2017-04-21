@@ -1,0 +1,68 @@
+<style type="text/css">
+	.animate.ng-enter,.animate.ng-leave{
+		transition: 300ms linear all;
+	}
+	.animate.ng-leave.ng-leave-active{
+		opacity: 0;
+	}
+	.animate.ng-enter.ng-enter-active{
+		opacity: 1
+	}
+</style>
+<div ng-controller="ctr">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-6 col-lg-offset-3" ng-hide="added">
+			<form class="well" ng-submit="enviar()">
+				<p class="panel panel-default" style="text-align: center; font-size: 25px; text-decoration: un">Añade un Juego</p>
+				<div class="form-group">
+				<label style="text-decoration: underline;" required>-Titulo:</label><input class="form-control" type="text" name="juego" ng-model="juegosnuevos.juego" placeholder="Titulo..."></div>
+				<div class="form-group">
+				<label style="text-decoration: underline;" required>-Estudio:</label><input class="form-control" type="text" name="desarrollador" ng-model="juegosnuevos.desarrollador" placeholder="Estudio..."></div>
+				<div class="form-group">
+				<label style="text-decoration: underline;" required>-Nota:</label><input class="form-control" type="text" name="nota" ng-model="juegosnuevos.nota" placeholder="Nota..."></div>
+				<div class="form-group">
+				<label style="text-decoration: underline;" required>-Plataforma:</label><input class="form-control" type="text" name="plataformas" ng-model="juegosnuevos.plataforma" placeholder="Plataforma..."></div>
+				<div class="form-group">
+				<label style="text-decoration: underline;" required>-Genero:</label><input class="form-control" type="text" name="genero" ng-model="juegosnuevos.genero" placeholder="Genero..."></div>
+				<div class="form-group">
+				<label style="text-decoration: underline;" required>-Imagen::</label><input class="form-control" type="text" name="imagen" ng-model="juegosnuevos.imagen" placeholder="Imagen..."></div>
+				<input class="btn btn-default" type="submit" name="send" value="Registrar Juego">
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid" ng-show="added">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2">
+			-Filtrar Resultados:  <input type="text" placeholder="Palabra clave..." ng-model="filt"> -Ordenar Por:  
+			<select ng-model="val">
+				<option selected="selected" value="juego">Ascendente</option>
+				<option value="-nota">Nota</option>
+				<option value="-juego">Descendente</option>	
+			</select>
+			<button class="btn btn-primary" ng-click='add()' style="margin-left: 125px;">Añadir Juego</button><br><br>
+
+			<ul class="list-group">
+		
+				<li class="animate well list-group-item" ng-repeat="item in juegos | filter : filt | orderBy:val " style="border: 1px solid grey;height: 240px; margin-bottom: 15px;"><img class="img-thumbnail" style="float: left; width: 170px; height: 200px; margin-right: 20px;" src="{{item.imagen}}"/>
+
+					<div class="container" style="font-size: 20px; float: right; width: 280px; text-decoration: underline; margin-right: 150px; height: 50px;"><strong>{{item.juego}}</strong>
+					</div>
+
+					<div class="container" style="position: absolute; margin-left: 180px; margin-top: 50px; width: 280px;">
+						<strong>-Estudio: </strong> {{item.desarrollador}}<br>
+						<strong>-Genero: </strong> {{item.genero}}<br>
+						<strong>-Plataformas: </strong>{{item.plataforma}}<br> 
+						<strong>-Nota: </strong> {{item.nota}}
+					</div>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+

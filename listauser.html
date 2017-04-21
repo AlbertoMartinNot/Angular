@@ -1,20 +1,20 @@
 <div class="container-fluid">
- 	<div class="row">
- 		<div class="col-lg-6 col-lg-offset-3">
- 		<input type="text" placeholder="Filtrar usuarios..." ng-model="filtro"><br><br>
- 			<table class="table" ng-controller='ctrl2'>
- 				<tr class="bg-info">
- 					<th>Pais</th>
- 					<th>Edad</th>
- 					<th>Email</th>
- 				</tr>
- 				<tr ng-repeat="usr in usuarios | filter:filtro | orderBy:'edad' ">
- 					<td>{{usr.user}}</td>
- 					<td>{{usr.edad}}</td>
- 					<td>{{usr.mail}}</td>
- 					<td><button class="btn btn-warning" ng-click="eliminar(usr)">Eliminar</button></td>
- 				</tr>
- 			</table>
- 		</div>
- 	</div>	
- </div>
+	<div class="row">
+		<div class="col-lg-6 col-lg-offset-3">
+			<input type="text" placeholder="Filtrar usuarios..." ng-model="filtro"><br><br>
+			<table class="table" ng-controller='ctrl2'>
+				<tr class="bg-info">
+					<th>Pais</th>
+					<th>Edad</th>
+					<th>Email</th>
+				</tr>
+				<tr ng-repeat="usr in usuarios | filter:filtro | orderBy:'edad' ">
+					<td>{{usr.user}}</td>
+					<td>{{usr.edad}}</td>
+					<td>{{usr.mail}}</td>
+					<td><button class="btn btn-warning" ng-click="eliminar">Eliminar</button></td>
+				</tr>
+			</table>
+		</div>
+	</div>	
+</div>
